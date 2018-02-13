@@ -31,9 +31,8 @@ public class TaxesManagerOperations implements RestOperationsTaxes{
 	}
 	
 	private SalaryDTO searchNet(double amount, List<CountryTaxesCrud> taxes) {
-		CountryTaxesCrud res = taxes.get(0);
 		Double netSalary = 0.;
-		for(int i=0;i<taxes.size()-1;i++){	
+		for(int i=0;i<taxes.size();i++){	
 			if(taxes.get(i).getMaxAmount() > amount){
 				netSalary += (amount - taxes.get(i).getMinAmount())*(1-taxes.get(i).getTax());
 				return new SalaryDTO(amount, netSalary.intValue());
