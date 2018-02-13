@@ -35,8 +35,6 @@ public class TaxesManagerApplicationTests {
 	
 	@Test
 	public void getSomething(){
-		SalaryDTO salary = manager.getNetSalary("isRael", 1000);
-		System.out.println(salary);
 		/*SalaryDTO salary = manager.getNetSalary("isRael", 1000);
 		System.out.println(salary);
 		SalaryDTO salary1 = manager.getNetSalary("isRael", 10000);
